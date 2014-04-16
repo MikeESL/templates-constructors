@@ -58,4 +58,75 @@ var photosTemplate = function(photodata) {
 var popularPhotos = photosTemplate(photos);
 $(".template2").append(popularPhotos);
 
+// Constructor, number 1
+function beerSelection(brewery, style, name, onTap){
+	this.brewery = brewery;
+	this.style = style;
+	this.name = name;
+	this.onTap = onTap;
+	this.emptyKeg = function() {
+		this.onTap = false;
+};
+}	
+var Shelter = new beerSelection("Coast", "IPA", "HopArt", true);
+var ColemanPH = new beerSelection("Holy City", "Porter", "Pluff Mud", true);
+
+// Constructors, interaction
+
+function person (name){
+	this.name = name;
+	this.isSober = true;
+	this.isDrunk = function() {
+			this.isSober = false; 
+};
+	this.drink = function(beverage) {
+					beverage.isAlcohol = true;
+};
+};
+var mike = new person("mike");
+
+function beverage (type, isAlcohol){
+		this.type = type;
+		this.isAlcohol = isAlcohol;
+		this.drink = function(person){
+					person.isSober = false;
+
+};
+};
+var WoodfordReserve = new beverage("bourbon", "true");
+var Folgers = new beverage ("coffee", "false");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
