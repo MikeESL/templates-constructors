@@ -79,7 +79,7 @@ function person (name){
 	this.isDrunk = function() {
 			this.isSober = false; 
 };
-	this.drink = function(beverage) {
+	this.intoxicated = function(beverage) {
 					beverage.isAlcohol = true;
 };
 };
@@ -88,7 +88,7 @@ var mike = new person("mike");
 function beverage (type, isAlcohol){
 		this.type = type;
 		this.isAlcohol = isAlcohol;
-		this.drink = function(person){
+		this.intoxicated = function(person){
 					person.isSober = false;
 
 };
