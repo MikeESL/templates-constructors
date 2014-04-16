@@ -93,8 +93,8 @@ function beverage (type, isAlcohol){
 
 };
 };
-var WoodfordReserve = new beverage("bourbon", "true");
-var Folgers = new beverage ("coffee", "false");
+var WoodfordReserve = new beverage("bourbon", true);
+var Folgers = new beverage ("coffee", false);
 
 
 
